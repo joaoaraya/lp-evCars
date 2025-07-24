@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --body-bg: #ffffff;
+}
+
+.temaEscuro:root {
+    --body-bg: #242529;
+}
+
+* {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    transition: 0.1s;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 8px;
+    }
+
+    // Scrollbar: Controle deslizante
+    &::-webkit-scrollbar-thumb {
+        //background-color: var(--body-scrollbar);
+        border-radius: 8px;
+    }
+
+    // Scrollbar: Parte de tras da barra
+    &::-webkit-scrollbar-track {
+        background-color: var(--body-bg);
+    }
+
+    // Ocultar as setas do input number
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}
+
+body {
+    margin: 0 auto !important;
+    background: var(--body-bg);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
