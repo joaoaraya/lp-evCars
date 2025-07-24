@@ -4,42 +4,44 @@ export default function NavBar() {
 
     const navbarLinks = [
         {
-            title: 'home',
+            title: 'Home',
             path: '/'
         }, {
-            title: 'products',
+            title: 'Products',
             path: '/'
         }, {
-            title: 'features',
+            title: 'Features',
             path: '/'
         }, {
-            title: 'gear shop',
+            title: 'Gear Shop',
             path: '/'
         }
     ]
 
     return (
-        <div id='navbar'>
-            <div>
-                <a href="">
-                    <img src="" alt="" />
-                </a>
-            </div>
-
-            <div>
-                {navbarLinks.map((link, index) =>
-                    <a href={link.path} key={index}>
-                        <p>{link.title}</p>
+        <nav>
+            <div id='navbar'>
+                <div>
+                    <a href="">
+                        <img src="" alt="" />
                     </a>
-                )}
-            </div>
+                </div>
 
-            <div>
-                <button>
-                    <p>Order Now</p>
-                    <img src="" alt="" />
-                </button>
+                <div id='links'>
+                    {navbarLinks.map((link, index) =>
+                        <a href={link.path} key={index} className='link'>
+                            <p>{link.title}</p>
+                        </a>
+                    )}
+                </div>
+
+                <div id='cta'>
+                    <button>
+                        <p>Order Now</p>
+                        <img src="" alt="l" />
+                    </button>
+                </div>
             </div>
-        </div>
+        </nav>
     )
 }

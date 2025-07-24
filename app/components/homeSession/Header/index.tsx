@@ -16,7 +16,7 @@ export default function Header() {
     ]
 
     return (
-        <>
+        <header>
             <div id='header-banner'>
                 <img src="" alt="Smooth EV Cars" />
                 <img src="" alt="Car" />
@@ -30,6 +30,6 @@ export default function Header() {
                     </div>
                 )}
             </div>
-        </>
+        </header>
     )
 }

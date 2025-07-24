@@ -5,17 +5,15 @@ import Chargers from '@/app/components/homeSession/Chargers';
 import Story from '@/app/components/homeSession/Story';
 import Energy from '@/app/components/homeSession/Energy';
 import Gallery from '@/app/components/homeSession/Gallery';
-import Footer from '@/app/components/homeSession/Footer';
 import Contact from '@/app/components/homeSession/Contact';
+import Footer from '@/app/components/homeSession/Footer';
 
 export default function Home() {
 
     return (
-        <div className='home'>
-            <header>
-                <NavBar />
-                <Header />
-            </header>
+        <div id='home'>
+            <NavBar />
+            <Header />
 
             <main>
                 <Chargers />
@@ -25,9 +23,7 @@ export default function Home() {
                 <Contact />
             </main>
 
-            <footer>
-                <Footer />
-            </footer>
+            <Footer />
         </div>
     )
 }

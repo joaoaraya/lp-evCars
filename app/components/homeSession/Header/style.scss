@@ -1,0 +1,25 @@
+header {
+    #header-counters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 350px;
+
+            .counter-title {
+                font-size: var(--headingTwo);
+                font-weight: 600;
+            }
+
+            .counter-description {
+                font-size: var(--paragraphText);
+            }
+        }
+    }
+}

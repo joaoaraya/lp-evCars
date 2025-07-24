@@ -51,41 +51,43 @@ export default function Footer() {
     ]
 
     return (
-        <div id='footer'>
-            <div>
+        <footer>
+            <div id='footer'>
                 <div>
                     <div>
-                        <img src="" alt="EV Voltedge Logo" />
+                        <div>
+                            <img src="" alt="EV Voltedge Logo" />
+                        </div>
+
+                        <div>
+                            {footerLinks.map((session, index) =>
+                                <div key={index}>
+                                    <h1>{session.headline}</h1>
+
+                                    {session.links.map((link, index) =>
+                                        <a key={index} href={link.path} target='_blank'>
+                                            <p>{link.title}</p>
+                                        </a>
+                                    )}
+                                </div>
+                            )}
+                        </div>
                     </div>
 
                     <div>
-                        {footerLinks.map((session, index) =>
-                            <div key={index}>
-                                <h1>{session.headline}</h1>
+                        <div><p>&copy; 2025</p></div>
+                        <div>
+                            <a href="/">
+                                <p>Term of Service</p>
+                            </a>
 
-                                {session.links.map((link, index) =>
-                                    <a key={index} href={link.path} target='_blank'>
-                                        <p>{link.title}</p>
-                                    </a>
-                                )}
-                            </div>
-                        )}
+                            <a href="/">
+                                <p>Privacy Policy</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <div>
-                    <div><p>&copy; 2025</p></div>
-                    <div>
-                        <a href="/">
-                            <p>Term of Service</p>
-                        </a>
-
-                        <a href="/">
-                            <p>Privacy Policy</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </div >
+        </footer>
     )
 }

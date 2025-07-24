@@ -1,0 +1,56 @@
+nav {
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    max-width: 1330px;
+    padding: 24px;
+
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
+        background-color: var(--whiteTransparent50);
+
+        #links {
+            display: flex;
+            gap: 24px;
+
+            .link {
+                padding: 8px 12px;
+                font-size: var(--captionsFootnotes);
+                color: var(--primaryColor);
+
+                :hover {
+                    color: var(--subtextColor);
+                }
+            }
+        }
+
+        #cta {
+            button {
+                display: flex;
+                gap: 8px;
+                padding: 18px 24px;
+                background-color: var(--secondaryColor);
+
+                p {
+                    font-size: var(--captionsFootnotes);
+                }
+            }
+
+            :hover {
+                background-color: var(--primaryColor);
+
+                p {
+                    color: var(--alternativeColor);
+                }
+            }
+        }
+    }
+}
