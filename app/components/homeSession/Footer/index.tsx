@@ -4,62 +4,90 @@ export default function Footer() {
 
     const footerLinks = [
         {
-            headline: 'company',
+            headline: 'Company',
             links: [
                 {
-                    title: 'a',
+                    title: 'Features',
                     path: '/'
                 }, {
-                    title: 'b',
+                    title: 'Pricing',
                     path: '/'
                 }, {
-                    title: 'c',
+                    title: 'About Us',
                     path: '/'
                 },
                 {
-                    title: 'd',
+                    title: 'Contact',
+                    path: '/'
+                }
+            ]
+        }, {
+            headline: 'Resource',
+            links: [
+                {
+                    title: 'Blog',
+                    path: '/'
+                }, {
+                    title: 'Customer Stories',
+                    path: '/'
+                }, {
+                    title: 'Information',
                     path: '/'
                 },
                 {
-                    title: 'e',
+                    title: 'Legal',
+                    path: '/'
+                },
+                {
+                    title: 'Payments',
                     path: '/'
                 },
             ]
         }, {
-            headline: 'resource',
+            headline: 'Career',
             links: [
                 {
-                    title: 'a',
+                    title: 'Jobs',
                     path: '/'
                 }, {
-                    title: 'b',
+                    title: 'Hiring',
                     path: '/'
                 }, {
-                    title: 'c',
+                    title: 'News',
                     path: '/'
                 },
                 {
-                    title: 'd',
+                    title: 'Tips & Tricks',
                     path: '/'
-                },
+                }
+            ]
+        }, {
+            headline: 'Help',
+            links: [
                 {
-                    title: 'e',
+                    title: 'FAQs',
                     path: '/'
-                },
+                }, {
+                    title: 'Help Center',
+                    path: '/'
+                }, {
+                    title: 'Support',
+                    path: '/'
+                }
             ]
         }
     ]
 
     return (
         <footer>
-            <div id='footer'>
-                <div>
-                    <div>
-                        <div>
-                            <img src="" alt="EV Voltedge Logo" />
+            <div id='footer-outside-box'>
+                <div id='footer-inside-box'>
+                    <div id='main'>
+                        <div id='logo'>
+                            <img src='/assets/img-logo-white.png' alt='EV Voltedge Logo' />
                         </div>
 
-                        <div>
+                        <div id='links'>
                             {footerLinks.map((session, index) =>
                                 <div key={index}>
                                     <h1>{session.headline}</h1>
@@ -74,20 +102,27 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div>
-                        <div><p>&copy; 2025</p></div>
-                        <div>
-                            <a href="/">
-                                <p>Term of Service</p>
-                            </a>
+                    <div id='bottom'>
+                        <hr />
 
-                            <a href="/">
-                                <p>Privacy Policy</p>
-                            </a>
+                        <div>
+                            <div>
+                                <p>&copy; 2025</p>
+                            </div>
+
+                            <div id='links'>
+                                <a href="/">
+                                    <p>Term of Service</p>
+                                </a>
+
+                                <a href="/">
+                                    <p>Privacy Policy</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div >
+                </div >
+            </div>
         </footer>
     )
 }

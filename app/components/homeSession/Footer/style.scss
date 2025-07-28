@@ -1,0 +1,101 @@
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/assets/img-footer-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    #footer-outside-box {
+        width: 100%;
+        max-width: var(--viewMaxWidth);
+
+        #footer-inside-box {
+            margin: 50px;
+            padding: 50px;
+            box-sizing: border-box;
+            backdrop-filter: blur(20px);
+            background-color: var(--whiteTransparent10);
+
+            #main {
+                display: flex;
+                justify-content: space-between;
+                gap: 32px;
+
+                #logo {
+                    flex-grow: 1;
+                    width: 200px;
+                }
+
+                #links {
+                    flex-grow: 2;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 24px;
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+
+                        h1,
+                        p {
+                            font-size: var(--captionsFootnotes);
+                            font-weight: normal;
+                        }
+
+                        h1 {
+                            color: var(--alternativeColor);
+                            margin-bottom: 8px;
+                        }
+
+                        p {
+                            color: var(--whiteTransparent50);
+
+                            &:hover {
+                                color: var(--alternativeColor);
+                            }
+                        }
+                    }
+                }
+            }
+
+            #bottom {
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+
+                hr {
+                    border: 1px solid var(--whiteTransparent10);
+                    margin-bottom: 40px;
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    p {
+                        font-size: var(--captionsFootnotes);
+                        font-weight: normal;
+                        color: var(--alternativeColor);
+                    }
+
+                    #links {
+                        display: flex;
+                        gap: 24px;
+
+                        a :hover {
+                            color: var(--whiteTransparent50);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

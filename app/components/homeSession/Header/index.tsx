@@ -17,19 +17,21 @@ export default function Header() {
 
     return (
         <header>
-            <div id='header-banner'>
-                <img src="" alt="Smooth EV Cars" />
-                <img src="" alt="Car" />
-            </div>
+            <div id='header-inside-box'>
+                <div id='header-banner'>
+                    <img src='/assets/img-header-text.png' alt='' id='banner-text' />
+                    <img src='/assets/img-header-car.png' alt='' id='banner-car' />
+                </div>
 
-            <div id='header-counters'>
-                {counters.map((counter, index) =>
-                    <div key={index}>
-                        <p className='counter-title'>{counter.title}</p>
-                        <p className='counter-description'>{counter.description}</p>
-                    </div>
-                )}
+                <div id='header-counters'>
+                    {counters.map((counter, index) =>
+                        <div key={index}>
+                            <p className='counter-title'>{counter.title}</p>
+                            <p className='counter-description'>{counter.description}</p>
+                        </div>
+                    )}
+                </div>
             </div>
-        </header>
+        </header >
     )
 }

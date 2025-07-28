@@ -1,0 +1,73 @@
+#session-chargers {
+    #chargers-header {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-size: var(--captionsFootnotes);
+            font-weight: normal;
+            padding: 10px 20px;
+            background-color: var(--backgroundColor2);
+            color: var(--primaryColor);
+        }
+
+        h2 {
+            font-size: var(--headingThree);
+            font-weight: normal;
+            color: var(--primaryColor);
+        }
+    }
+
+    #chargers-cards {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+
+        .chargers-card {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-width: 370px;
+            margin-top: 40px;
+            cursor: pointer;
+
+            &:hover img {
+                filter: brightness(70%);
+            }
+
+            h1 {
+                margin-top: 8px;
+                font-size: var(--paragraphText);
+                font-weight: normal;
+                color: var(--primaryColor);
+            }
+
+            p {
+                font-size: var(--captionsFootnotes);
+                color: var(--subtextColor);
+            }
+
+            .charger-price {
+                display: flex;
+                gap: 8px;
+
+                p {
+                    font-size: var(--paragraphText);
+                }
+
+                .old-price {
+                    color: var(--subtextColor);
+                }
+
+                .new-price {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+    }
+}

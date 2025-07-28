@@ -5,8 +5,9 @@ nav {
     left: 50%;
     transform: translate(-50%, 0);
     width: 100%;
-    max-width: 1330px;
+    max-width: var(--viewMaxWidth);
     padding: 24px;
+    z-index: 10;
 
     #navbar {
         display: flex;

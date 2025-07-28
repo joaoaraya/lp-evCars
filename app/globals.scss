@@ -2,15 +2,22 @@
 
 :root {
     --backgroundColor1: #ffffff;
+    --backgroundColor2: #EDF2F6;
+    --backgroundColor3: #E9E9E9;
     --whiteTransparent50: #ffffff80;
+    --whiteTransparent10: #ffffff1a;
     --primaryColor: #000000;
     --secondaryColor: #E9FF61;
     --subtextColor: #999999;
     --alternativeColor: #ffffff;
 
     --captionsFootnotes: 18px;
+    --headingOne: 136px;
     --headingTwo: 80px;
+    --headingThree: 60px;
     --paragraphText: 24px;
+
+    --viewMaxWidth: 1440px;
 }
 
 * {
@@ -22,9 +29,7 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto !important;
+    margin: 0 auto;
     background: var(--backgroundColor1);
 }
 
