@@ -23,6 +23,8 @@ export default function Header() {
                     <img src='/assets/img-header-car.png' alt='' id='banner-car' />
                 </div>
 
+                <hr />
+
                 <div id='header-counters'>
                     {counters.map((counter, index) =>
                         <div key={index}>

@@ -1,57 +1,79 @@
 nav {
-    position: fixed;
-    box-sizing: border-box;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 100%;
-    max-width: var(--viewMaxWidth);
-    padding: 24px;
     z-index: 10;
 
-    #navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        border-radius: 16px;
-        backdrop-filter: blur(10px);
-        background-color: var(--whiteTransparent50);
+    #navbar-outside-box {
+        width: 100%;
+        max-width: var(--viewMaxWidth);
 
-        #links {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        #navbar-inside-box {
+            margin: 24px 48px;
+            box-sizing: border-box;
+
             display: flex;
-            gap: 24px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            background-color: var(--whiteTransparent50);
 
-            .link {
-                padding: 8px 12px;
-                font-size: var(--captionsFootnotes);
-                color: var(--primaryColor);
+            #logo {
+                img {
+                    width: 200px;
+                }
+            }
+
+            #links {
+                display: flex;
+                gap: 24px;
+
+                .link {
+                    padding: 8px 12px;
+                    font-size: var(--captionsFootnotes);
+                    color: var(--primaryColor);
+
+                    :hover {
+                        color: var(--subtextColor);
+                    }
+                }
+            }
+
+            #cta {
+                button {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 18px 24px;
+                    background-color: var(--secondaryColor);
+
+                    p {
+                        color: var(--primaryColor);
+                        font-size: var(--captionsFootnotes);
+                    }
+
+                    svg path {
+                        fill: var(--primaryColor);
+                    }
+                }
 
                 :hover {
-                    color: var(--subtextColor);
-                }
-            }
-        }
+                    background-color: var(--primaryColor);
 
-        #cta {
-            button {
-                display: flex;
-                gap: 8px;
-                padding: 18px 24px;
-                background-color: var(--secondaryColor);
+                    p {
+                        color: var(--alternativeColor);
+                    }
 
-                p {
-                    font-size: var(--captionsFootnotes);
+                    svg path {
+                        fill: var(--alternativeColor);
+                    }
                 }
             }
 
-            :hover {
-                background-color: var(--primaryColor);
-
-                p {
-                    color: var(--alternativeColor);
-                }
-            }
         }
     }
 }
