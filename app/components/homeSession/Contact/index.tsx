@@ -4,27 +4,38 @@ export default function Contact() {
 
     return (
         <div id='session-contact'>
-            <div>
+            <div id='contact-form'>
                 <h1>Reserve Your EV Today!</h1>
-                <form action="">
-                    <label htmlFor="">First Name</label>
-                    <input type="text" placeholder='John' />
 
-                    <label htmlFor="">Last Name</label>
-                    <input type="text" placeholder='Doe' />
+                <form action='/' method='post'>
+                    <div id='form-first-name'>
+                        <label htmlFor='firstName'>First Name</label>
+                        <input type='text' id='firstName' placeholder='John' />
+                    </div>
 
-                    <label htmlFor="">Email</label>
-                    <input type="text" placeholder='name@mail.com' />
+                    <div id='form-last-name'>
+                        <label htmlFor='lastName'>Last Name</label>
+                        <input type='text' id='lastName' placeholder='Doe' />
+                    </div>
 
-                    <label htmlFor="">Message</label>
-                    <textarea name="textarea_name" placeholder='Message' />
+                    <div id='form-mail'>
+                        <label htmlFor='mail'>Mail</label>
+                        <input type='text' id='mail' placeholder='name@mail.com' />
+                    </div>
 
-                    <input type="submit" value='Book Now' />
+                    <div id='form-message'>
+                        <label htmlFor='message'>Message</label>
+                        <textarea name="textarea_name" id='message' placeholder='Message' />
+                    </div>
+
+                    <div id='button-send'>
+                        <input type='submit' value='Book Now' />
+                    </div>
                 </form>
             </div>
 
-            <div>
-                <img src="" alt="" />
+            <div id='contact-banner'>
+                <img src='/assets/img-contact-car.png' alt='' />
             </div>
         </div>
     )

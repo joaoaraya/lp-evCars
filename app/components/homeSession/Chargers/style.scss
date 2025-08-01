@@ -1,5 +1,5 @@
 #session-chargers {
-    margin: 64px 0;
+    margin: 64px 48px;
 
     #chargers-header {
         display: flex;
@@ -12,6 +12,7 @@
             font-size: var(--captionsFootnotes);
             font-weight: normal;
             padding: 10px 20px;
+            text-align: center;
             background-color: var(--backgroundColor2);
             color: var(--primaryColor);
         }
@@ -19,6 +20,7 @@
         h2 {
             font-size: var(--headingThree);
             font-weight: normal;
+            text-align: center;
             color: var(--primaryColor);
         }
     }

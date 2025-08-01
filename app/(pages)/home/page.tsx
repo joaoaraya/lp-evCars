@@ -15,13 +15,11 @@ export default function Home() {
             <NavBar />
             <Header />
 
-            <main>
-                <Chargers />
-                <Story />
-                <Energy />
-                <Gallery />
-                <Contact />
-            </main>
+            <Chargers />
+            {/* <Story /> */}
+            <Energy />
+            {/* <Gallery /> */}
+            <Contact />
 
             <Footer />
         </div>

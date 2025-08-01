@@ -1,0 +1,41 @@
+#session-energy {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--backgroundColorAlternative);
+    margin: 64px 0;
+
+    #energy-outside-box {
+        width: 100%;
+        max-width: var(--viewMaxWidth);
+
+        #energy-inside-box {
+            margin: 128px 48px;
+
+            #energy-header {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+                justify-content: center;
+
+                h1 {
+                    font-size: var(--captionsFootnotes);
+                    font-weight: normal;
+                    padding: 10px 20px;
+                    text-align: center;
+                    background-color: var(--whiteTransparent10);
+                    color: var(--alternativeColor);
+                }
+
+                h2 {
+                    font-size: var(--headingThree);
+                    font-weight: normal;
+                    text-align: center;
+                    color: var(--alternativeColor);
+                }
+            }
+        }
+    }
+}

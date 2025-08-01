@@ -5,7 +5,7 @@ export default function Gallery() {
     return (
         <div id='session-gallery'>
             <div>
-                <h1>Versatile Power</h1>
+                <h1>Overview</h1>
                 <h2>Future-Ready Comfort</h2>
             </div>
 

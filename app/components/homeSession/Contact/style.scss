@@ -1,0 +1,105 @@
+#session-contact {
+    display: flex;
+    align-items: center;
+    margin: 64px 48px;
+
+    #contact-form {
+        margin: 0 48px;
+
+        h1 {
+            font-size: var(--headingFour);
+            font-weight: normal;
+            margin-bottom: 32px;
+        }
+
+        form {
+            display: grid;
+            grid-template-areas:
+                "form-first-name form-last-name"
+                "form-mail form-mail"
+                "form-message form-message";
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+
+            #form-first-name {
+                grid-area: form-first-name;
+            }
+
+            #form-last-name {
+                grid-area: form-last-name;
+            }
+
+            #form-mail {
+                grid-area: form-mail;
+            }
+
+            #form-message {
+                grid-area: form-message;
+            }
+
+            div {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                label {
+                    font-size: var(--captionsFootnotes);
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    box-sizing: border-box;
+                    font-size: var(--captionsFootnotes);
+                    font-weight: normal;
+                    padding: 12px;
+                    border: none;
+                    background: var(--backgroundColor2);
+
+                    &::placeholder {
+                        color: var(--subtextColor);
+                    }
+
+                    &:focus {
+                        outline: 2px solid var(--primaryColor);
+
+                        &::placeholder {
+                            padding-left: 4px;
+                            transition: padding 0.3s;
+                        }
+                    }
+                }
+
+                textarea {
+                    height: 128px;
+                    resize: vertical;
+                }
+            }
+
+            #button-send {
+                justify-self: start;
+                width: auto;
+
+                input {
+                    padding: 18px 24px;
+                    cursor: pointer;
+                    color: var(--secondaryColor);
+                    background-color: var(--primaryColor);
+
+                    &:hover {
+                        color: var(--primaryColor);
+                        background-color: var(--secondaryColor);
+                    }
+                }
+            }
+        }
+    }
+
+    #contact-banner {
+
+        img {
+            width: 100%;
+        }
+    }
+}
