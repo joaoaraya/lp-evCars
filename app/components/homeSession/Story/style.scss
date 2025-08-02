@@ -1,0 +1,145 @@
+#session-story {
+    width: 100%;
+    margin: 64px 0;
+    display: flex;
+    justify-content: center;
+
+    #story-outside-box {
+        width: 100%;
+        max-width: var(--viewMaxWidth);
+
+        #story-inside-box {
+            margin: 0 48px;
+
+            #story-header {
+                display: grid;
+                grid-template-areas:
+                    "h1 h1"
+                    "h2 p";
+                grid-template-columns: 2fr 1fr;
+                align-items: center;
+                gap: 36px;
+                margin-bottom: 64px;
+
+                h1 {
+                    grid-area: h1;
+                    justify-self: start;
+                    width: auto;
+                    font-size: var(--captionsFootnotes);
+                    font-weight: normal;
+                    padding: 10px 20px;
+                    text-align: center;
+                    background-color: var(--backgroundColor2);
+                    color: var(--primaryColor);
+                }
+
+                h2 {
+                    grid-area: h2;
+                    font-size: var(--headingThree);
+                    font-weight: normal;
+                    max-width: 800px;
+                    color: var(--primaryColor);
+                }
+
+                p {
+                    grid-area: p;
+                    font-size: var(--captionsFootnotes);
+                    color: var(--subtextColor);
+                }
+            }
+
+            #story-media {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                overflow: hidden;
+
+                #video {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 92px;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    h1 {
+                        font-size: var(--headingFive);
+                        font-weight: normal;
+                        color: var(--primaryColor);
+                    }
+
+                    p {
+                        max-width: 75%;
+                        font-size: var(--captionsFootnotes);
+                        color: var(--subtextColor);
+                    }
+
+                    :hover {
+                        filter: brightness(70%);
+                    }
+                }
+
+                #link {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    padding: 24px;
+
+                    background:
+                        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url("/assets/img-car-card-bg.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+
+                    #card {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 32px;
+                        padding: 32px 24px;
+                        box-sizing: border-box;
+                        backdrop-filter: blur(10px);
+                        background-color: var(--whiteTransparent10);
+                        border: 1px solid var(--whiteTransparent50);
+
+                        #card-header {
+                            h1 {
+                                font-size: var(--headingFive);
+                                font-weight: normal;
+                                color: var(--alternativeColor);
+                                margin-bottom: 12px;
+                            }
+
+                            p {
+                                font-size: var(--captionsFootnotes);
+                                color: var(--alternativeColor);
+                            }
+                        }
+
+                        #card-cta {
+                            justify-self: start;
+                            width: auto;
+
+                            button {
+                                padding: 12px 32px;
+                                cursor: pointer;
+                                font-size: var(--captionsFootnotes);
+                                color: var(--primaryColor);
+                                background-color: var(--secondaryColor);
+
+                                &:hover {
+                                    color: var(--secondaryColor);
+                                    background-color: var(--primaryColor);
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

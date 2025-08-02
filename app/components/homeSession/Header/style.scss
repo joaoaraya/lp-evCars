@@ -30,14 +30,32 @@ header {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                opacity: 0;
             }
 
             #banner-text {
                 z-index: 1;
+                animation: fadeIn 1.5s ease-in forwards;
             }
 
             #banner-car {
                 z-index: 2;
+                transform: translate(-150%, -50%);
+                animation: slideInFromLeft 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+                animation-delay: 0.5s;
+            }
+
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes slideInFromLeft {
+                to {
+                    transform: translate(-50%, -50%);
+                    opacity: 1;
+                }
             }
         }
 

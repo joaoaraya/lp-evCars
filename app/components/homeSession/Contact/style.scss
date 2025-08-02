@@ -1,105 +1,122 @@
 #session-contact {
+    width: 100%;
+    margin: 64px 0;
     display: flex;
-    align-items: center;
-    margin: 64px 48px;
+    justify-content: center;
 
-    #contact-form {
-        margin: 0 48px;
+    #contact-outside-box {
+        width: 100%;
+        max-width: var(--viewMaxWidth);
 
-        h1 {
-            font-size: var(--headingFour);
-            font-weight: normal;
-            margin-bottom: 32px;
-        }
+        #contact-inside-box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            padding: 0 48px;
+            box-sizing: border-box;
 
-        form {
-            display: grid;
-            grid-template-areas:
-                "form-first-name form-last-name"
-                "form-mail form-mail"
-                "form-message form-message";
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            #contact-form {
+                flex-grow: 1;
 
-            #form-first-name {
-                grid-area: form-first-name;
-            }
-
-            #form-last-name {
-                grid-area: form-last-name;
-            }
-
-            #form-mail {
-                grid-area: form-mail;
-            }
-
-            #form-message {
-                grid-area: form-message;
-            }
-
-            div {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-
-                label {
-                    font-size: var(--captionsFootnotes);
+                h1 {
+                    font-size: var(--headingFour);
+                    font-weight: normal;
+                    margin-bottom: 32px;
                 }
 
-                input,
-                textarea {
-                    width: 100%;
-                    box-sizing: border-box;
-                    font-size: var(--captionsFootnotes);
-                    font-weight: normal;
-                    padding: 12px;
-                    border: none;
-                    background: var(--backgroundColor2);
+                form {
+                    display: grid;
+                    grid-template-areas:
+                        "form-first-name form-last-name"
+                        "form-mail form-mail"
+                        "form-message form-message";
+                    grid-template-columns: 1fr 1fr;
+                    gap: 20px;
 
-                    &::placeholder {
-                        color: var(--subtextColor);
+                    #form-first-name {
+                        grid-area: form-first-name;
                     }
 
-                    &:focus {
-                        outline: 2px solid var(--primaryColor);
+                    #form-last-name {
+                        grid-area: form-last-name;
+                    }
 
-                        &::placeholder {
-                            padding-left: 4px;
-                            transition: padding 0.3s;
+                    #form-mail {
+                        grid-area: form-mail;
+                    }
+
+                    #form-message {
+                        grid-area: form-message;
+                    }
+
+                    div {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+
+                        label {
+                            font-size: var(--captionsFootnotes);
+                        }
+
+                        input,
+                        textarea {
+                            width: 100%;
+                            box-sizing: border-box;
+                            font-size: var(--captionsFootnotes);
+                            font-weight: normal;
+                            padding: 12px;
+                            border: none;
+                            background: var(--backgroundColor2);
+
+                            &::placeholder {
+                                color: var(--subtextColor);
+                            }
+
+                            &:focus {
+                                outline: 2px solid var(--primaryColor);
+
+                                &::placeholder {
+                                    padding-left: 4px;
+                                    transition: padding 0.3s;
+                                }
+                            }
+                        }
+
+                        textarea {
+                            height: 128px;
+                            resize: vertical;
+                        }
+                    }
+
+                    #button-send {
+                        justify-self: start;
+                        width: auto;
+
+                        input {
+                            padding: 18px 24px;
+                            cursor: pointer;
+                            color: var(--secondaryColor);
+                            background-color: var(--primaryColor);
+
+                            &:hover {
+                                color: var(--primaryColor);
+                                background-color: var(--secondaryColor);
+                            }
                         }
                     }
                 }
-
-                textarea {
-                    height: 128px;
-                    resize: vertical;
-                }
             }
 
-            #button-send {
-                justify-self: start;
-                width: auto;
+            #contact-banner {
 
-                input {
-                    padding: 18px 24px;
-                    cursor: pointer;
-                    color: var(--secondaryColor);
-                    background-color: var(--primaryColor);
-
-                    &:hover {
-                        color: var(--primaryColor);
-                        background-color: var(--secondaryColor);
-                    }
+                img {
+                    width: 100%;
+                    max-width: 750px;
                 }
             }
-        }
-    }
-
-    #contact-banner {
-
-        img {
-            width: 100%;
         }
     }
 }
