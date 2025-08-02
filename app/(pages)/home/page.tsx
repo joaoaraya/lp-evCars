@@ -16,9 +16,9 @@ export default function Home() {
             <Header />
 
             <Chargers />
-            {/* <Story /> */}
+            <Story />
             <Energy />
-            {/* <Gallery /> */}
+            <Gallery />
             <Contact />
 
             <Footer />

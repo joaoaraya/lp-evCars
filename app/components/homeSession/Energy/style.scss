@@ -1,17 +1,17 @@
 #session-energy {
     width: 100%;
+    margin: 64px 0;
     display: flex;
     justify-content: center;
     overflow: hidden;
     background-color: var(--backgroundColorAlternative);
-    margin: 64px 0;
 
     #energy-outside-box {
         width: 100%;
         max-width: var(--viewMaxWidth);
 
         #energy-inside-box {
-            margin: 128px 48px;
+            margin: 128px 64px;
 
             #energy-header {
                 display: flex;
@@ -19,6 +19,7 @@
                 gap: 16px;
                 align-items: center;
                 justify-content: center;
+                margin-bottom: 64px;
 
                 h1 {
                     font-size: var(--captionsFootnotes);
@@ -34,6 +35,190 @@
                     font-weight: normal;
                     text-align: center;
                     color: var(--alternativeColor);
+                }
+            }
+
+            #energy-cards {
+                display: grid;
+                grid-template-areas:
+                    "comments comments mobile"
+                    "charger logo mobile"
+                    "charger battery mobile";
+                grid-template-columns: 3fr 3fr 4fr;
+                gap: 20px;
+
+                #energy-card-comments {
+                    grid-area: comments;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    padding: 32px;
+                    background-color: var(--whiteTransparent10);
+
+                    #card-header {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+
+                        div {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-start;
+
+                            h1 {
+                                max-width: 240px;
+                                font-size: var(--headingFour);
+                                font-weight: normal;
+                                line-height: 115%;
+                                color: var(--alternativeColor);
+                            }
+
+                            p {
+                                font-size: var(--captionsFootnotes);
+                                color: var(--secondaryColor);
+                            }
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                                max-width: 74px;
+                            }
+                        }
+                    }
+
+                    #card-footer {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 24px;
+                        font-size: var(--captionsFootnotes);
+                        color: var(--alternativeColor);
+
+                        #persons {
+                            display: flex;
+                            align-items: center;
+
+                            img {
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                object-fit: cover;
+                                border: 2px solid var(--backgroundColorAlternative);
+
+                                &+img {
+                                    margin-left: -8px;
+                                    z-index: 1;
+                                }
+                            }
+
+                            p {
+                                padding-left: 12px;
+                            }
+                        }
+
+                        #counter {
+                            padding: 8px 12px;
+                            background-color: var(--whiteTransparent10);
+                        }
+                    }
+                }
+
+                #energy-card-charger {
+                    grid-area: charger;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 160px;
+                    padding: 24px;
+
+                    background: url("/assets/img-energy-bg-1.png");
+                    background-color: var(--secondaryColor);
+                    background-position: right;
+                    background-repeat: no-repeat;
+                    background-size: auto;
+
+                    #link p {
+                        justify-self: start;
+                        padding: 8px 16px;
+                        font-size: var(--captionsFootnotes);
+                        color: var(--alternativeColor);
+                        background-color: #000000;
+                    }
+
+                    #counter {
+                        color: var(--primaryColor);
+
+                        h1 {
+                            font-size: var(--headingTwo);
+                        }
+
+                        p {
+                            font-size: var(--paragraphText);
+                        }
+                    }
+                }
+
+                #energy-card-logo {
+                    grid-area: logo;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 40px;
+                    background-color: #ffffff;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        max-width: 280px;
+                    }
+                }
+
+                #energy-card-battery {
+                    grid-area: battery;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 40px;
+                    padding: 24px;
+                    background-color: var(--whiteTransparent10);
+
+                    img {
+                        width: 100%;
+                        max-width: 36px;
+                    }
+
+                    p {
+                        font-size: var(--captionsFootnotes);
+                        font-weight: normal;
+                        color: var(--alternativeColor);
+                    }
+                }
+
+                #energy-card-mobile {
+                    grid-area: mobile;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    background:
+                        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url("/assets/img-energy-bg-2.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    overflow: hidden;
+                    padding: 72px 32px;
+
+                    #logo {
+                        width: 100%;
+                        max-width: 180px;
+                    }
+
+                    #text {
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
                 }
             }
         }
