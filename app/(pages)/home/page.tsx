@@ -12,8 +12,10 @@ export default function Home() {
 
     return (
         <div id='home'>
-            <NavBar />
-            <Header />
+            {
+                /*<NavBar />
+                <Header />*/
+            }
 
             <Chargers />
             <Story />

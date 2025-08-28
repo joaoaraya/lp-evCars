@@ -106,8 +106,8 @@ export default function Footer() {
                         <hr />
 
                         <div>
-                            <div>
-                                <p>&copy; 2025</p>
+                            <div id='copyright'>
+                                <p>&copy; 2025 <a href="https://joaoaraya.dev" target="_blank">João Araya</a></p>
                             </div>
 
                             <div id='links'>
@@ -121,7 +121,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                </div >
+                </div>
             </div>
         </footer>
     )

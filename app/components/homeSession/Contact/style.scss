@@ -111,10 +111,84 @@
             }
 
             #contact-banner {
+                flex-grow: 1;
 
                 img {
                     width: 100%;
                     max-width: 750px;
+                }
+            }
+        }
+    }
+}
+
+/* --- Laptop --- */
+
+@media screen and (max-device-width: 1000px),
+screen and (max-width: 1000px) {
+    #session-contact {
+        #contact-outside-box {
+            #contact-inside-box {
+
+                #contact-form {
+                    flex: 1.5;
+                }
+
+                #contact-banner {
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
+
+/* --- Tablet --- */
+
+@media screen and (max-device-width: 800px),
+screen and (max-width: 800px) {
+    #session-contact {
+        #contact-outside-box {
+
+            #contact-inside-box {
+                flex-direction: column;
+
+                #contact-form {
+                    flex: 1;
+                }
+
+                #contact-banner {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/* --- Mobile --- */
+
+@media screen and (max-device-width: 480px),
+screen and (max-width: 480px) {
+    #session-contact {
+        margin: 32px 0;
+
+        #contact-outside-box {
+
+            #contact-inside-box {
+                gap: 32px;
+                padding: 0 24px;
+
+                #contact-form {
+
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+
+
+                        #button-send {
+                            margin-top: 16px;
+                        }
+                    }
                 }
             }
         }

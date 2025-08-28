@@ -24,6 +24,7 @@ footer {
 
             #main {
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-between;
                 gap: 32px;
 
@@ -80,18 +81,99 @@ footer {
                     align-items: center;
                     justify-content: space-between;
 
+                    a,
                     p {
                         font-size: var(--captionsFootnotes);
                         font-weight: normal;
                         color: var(--alternativeColor);
                     }
 
+                    a {
+
+                        &:hover,
+                        p:hover {
+                            color: var(--whiteTransparent50);
+                        }
+                    }
+
                     #links {
                         display: flex;
                         gap: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
 
-                        a :hover {
-                            color: var(--whiteTransparent50);
+/* --- Tablet --- */
+
+@media screen and (max-device-width: 800px),
+screen and (max-width: 800px) {
+    footer {
+        #footer-outside-box {
+            #footer-inside-box {
+                margin: 24px;
+            }
+        }
+    }
+}
+
+/* --- Mobile --- */
+
+@media screen and (max-device-width: 480px),
+screen and (max-width: 480px) {
+    footer {
+
+        #footer-outside-box {
+
+            #footer-inside-box {
+                margin: 0;
+                padding: 24px;
+
+                #main {
+                    flex-direction: column;
+                    gap: 16px;
+
+                    #logo {
+                        max-width: 180px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    #links {
+                        flex-direction: column;
+
+                        div {
+                            gap: 8px;
+
+                            h1,
+                            p {
+                                font-size: var(--captionsFootnotesTwo);
+                            }
+                        }
+                    }
+                }
+
+                #bottom {
+                    margin-top: 32px;
+
+                    hr {
+                        margin-bottom: 32px;
+                    }
+
+                    div {
+                        flex-direction: column-reverse;
+                        gap: 48px;
+
+                        #links {
+                            width: 100%;
+                            flex-direction: row;
+                            justify-content: space-evenly;
+                            flex-wrap: wrap;
+                            gap: 16px;
                         }
                     }
                 }
