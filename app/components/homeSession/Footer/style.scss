@@ -121,15 +121,15 @@ screen and (max-width: 800px) {
 
 /* --- Mobile --- */
 
-@media screen and (max-device-width: 480px),
-screen and (max-width: 480px) {
+@media screen and (max-device-width: 640px),
+screen and (max-width: 640px) {
     footer {
 
         #footer-outside-box {
 
             #footer-inside-box {
                 margin: 0;
-                padding: 24px;
+                padding: 16px;
 
                 #main {
                     flex-direction: column;
